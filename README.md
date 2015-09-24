@@ -11,7 +11,7 @@
 This project can be installed via [Composer]:
 
 ``` bash
-$ composer require paulbunyannet/mail:^1.0
+$ composer require paulbunyannet/mail:"^1.0"
 ```
 
 ## Get Mail
