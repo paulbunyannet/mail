@@ -1,0 +1,34 @@
+{
+  "name": "paulbunyannet/mail",
+  "description": "Get message from mail box",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mitul Koradia",
+      "email": "mitulkoradia@gmail.com"
+    },
+    {
+      "name": "Nate Nolting",
+      "email": "naten@paulbunyan.net"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.5",
+    "phpunit/phpunit": "^4.8",
+    "swiftmailer/swiftmailer": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pbc\\Mail\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "scripts": {
+    "test": [
+      "phpunit --verbose --coverage-text"
+    ]
+  }
+}

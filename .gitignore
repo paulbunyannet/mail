@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+vendor
+.idea
+composer.lock
+tests/tmp
+mail.sublime-project
+mail.sublime-workspace
+test.php
+phpunitdebug.txt
