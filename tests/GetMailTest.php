@@ -119,7 +119,7 @@ class GetMailTest extends \PHPUnit_Framework_TestCase
         $this->init();
         $this->assertEquals(1, intval($this->getSend()));
 
-        $get = new GetMail(['username' => 'root', 'password' => 'root', 'email' => $this->getTo(), 'mailServer' => $this->getServer(), 'port' => $this->getPort(), 'validateCert' => false]);
+        #$get = new GetMail(['username' => 'root', 'password' => 'root', 'email' => $this->getTo(), 'mailServer' => $this->getServer(), 'port' => $this->getPort(), 'validateCert' => false]);
 
     }
 
