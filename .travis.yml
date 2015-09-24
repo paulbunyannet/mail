@@ -11,10 +11,13 @@ matrix:
     - php: hhvm
 
 before_install:
-- composer self-update
+    - composer self-update
+    - gem install mailcatcher
+    - phpenv config-add travis.php.ini
+    - mailcatcher
 install: composer install --prefer-source --no-interaction --dev
 #script: composer test
 cache:
   directories:
-  - vendor
-  - $HOME/.composer/cache
+    - vendor
+    - $HOME/.composer/cache
