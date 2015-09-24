@@ -5,19 +5,19 @@ php:
 - 5.6
 - 7.0
 - hhvm
-
 matrix:
   allow_failures:
-    - php: hhvm
-
+  - php: hhvm
 before_install:
-    - composer self-update
-    - gem install mailcatcher
-    - phpenv config-add travis.php.ini
-    - mailcatcher
+- composer self-update
+- gem install mailcatcher
+- phpenv config-add travis.php.ini
+- mailcatcher
 install: composer install --prefer-source --no-interaction --dev
-#script: composer test
 cache:
   directories:
-    - vendor
-    - $HOME/.composer/cache
+  - vendor
+  - $HOME/.composer/cache
+notifications:
+  slack:
+    secure: dUa9j9lnmsd+CsTLyY3Yqga+GdJ8Ht+CMOdwl33TSihA5eQUpxmB81HLHPIhTV+hF9mgYJAaoV01MkGhETqUUc7rSZe0ml11zLuGs+aoaouPsU9pKNRXNP5IqXQRNBGankJjjuykShIwecxdmWHECZkNZN4Ny0r5yxh+TsILl1yz8nLWj9oou+e2BsRgLyg1ajEE3k0c5kuv48UTBTOOopXuwAnoxN5JyWqLP7AKflTMZNQXqWghUQW+o5fysz/MibMJLzU00vNL+4Yvakxkm86CYgtmiUSoHcP0tOU/q6KW0MInipQSJc3iYoHi6E/fl+0BeElwfLY2rixYMChuFVpULZSNB5p2L7fHc3Cc2YLhuDFO0hWjFhqZvDAUzRuylc5rnv43emAMEIV3MkabQQOjcIMx/xDXFueYDYWEE/SsImqBXGb4ceDmnv6hxMxHkF7FMLCj1AdhWo0fDpb+UPExsPNu67PJ83SxRgKLL/jFOiFatL+g7M8jO5ootbKiKoxSs6Kc/8Tilnw+YjamsROHbN9n87SGS6Bu9ljk7I7YXX6/+n3AxunKQlEVrTPJJbCn43ViZCAK2qqL1N9V2WpYZOGmhpX4PBSaV3nm6Kv6bl2rb2kXwxTd2GxKnTCm2ZEOKiRIpxcG7yr7Pd2ONQv9H67OLsYVsUMP1/OnKgE=
